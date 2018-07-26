@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+
+<h1>Logs</h1>
+<p>
+<p>A Way to keep track of your stuff.</p>
+<button class="collapsible">How to use logs</button>
+<div class="content">
+  <p>keep track of daily activites in quick steps that automatically save for you.</p>
+</div>
+<button class="collapsible">Journal</button>
+<div class="content">
+  <p> Keep track of your daily emotions and interactions. </p>
+  <!-- add button here -->
+</div>
+<button class="collapsible">Food Log</button>
+<div class="content">
+<p>Keep track of what you eat, make sure to keep it healthy.</p>
+<!-- add button here -->
+</div>
+<button class="collapsible">Calorie Intake Chart</button>
+<div class="content">
+  <p>chart calorie intake.</p>
+<!-- add button here -->
+</div>
+
+<button class="collapsible">Fitness Log</button>
+<div class="content">
+   <p> Keep track of your excercise routines.</p>
+<!-- add button here -->
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
