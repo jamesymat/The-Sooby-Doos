@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+      font-family: "Lato", sans-serif;
+  }
+
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #F8749A;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 40px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #F1F1F1;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+      color: #FAEE07;
+  }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  @media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+
+
+<style text-align:center;>
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 30px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 29px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 100px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 20px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 19px;
+}
+
+</style>
+</head>
+<body style="background-color:powderblue;">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Mental Health</a>
+  <a href="#">Food</a>
+  <a href="#">Fitness</a>
+  <a href="#">Logs</a>
+</div>
+
+<div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+
+<script>
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<h2 align = center style="font:italic bold 60px Georgia,serif;"><u>Healthy Recipes</u></h2>
+<p></p>
+<button class="accordion">Vegan</button>
+<div class="panel">
+  <p>The <a href="http://www.eatingwell.com/recipes/18003/lifestyle-diets/vegan/">eating well</a> website has vegan recipes for both drinks and food for any occasion.</p>
+</div>
+
+<button class="accordion">Vegetarian</button>
+<div class="panel">
+  <p>The <a href="https://www.ambitiouskitchen.com/52-healthy-vegetarian-recipes/">Ambitious Kitchen</a> site has 52 recipies for healthy vegetarian meals.</p>
+</div>
+
+<button class="accordion">Gluten Free</button>
+<div class="panel">
+  <p><a href="https://www.womansday.com/food-recipes/g2559/gluten-free-dinner-recipes/">Women's Kitchen</a> shares 42 easy to make gluten free dinner recipes.</p>
+</div>
+
+<button class="accordion">Dairy and Lactose Free</button>
+<div class="panel">
+  <p>In case you want to make lactose or dairy free meals, <a href= "http://www.eatingwell.com/recipes/17898/dietary-restrictions/dairy-free-lactose-free/">eating well</a> has all kinds of recipes from snacks to meals to desserts.</p>
+</div>
+
+<button class="accordion">Healthy Dinner Recipes</button>
+<div class="panel">
+  <p>The <a href="https://www.foodnetwork.com/topics/healthy-dinner-recipes">Food Network</a> website has over 700 recipes for dinner.</p>
+</div>
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+</html>
