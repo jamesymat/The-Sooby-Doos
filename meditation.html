@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+      font-family: "Lato", sans-serif;
+  }
+
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #F8749A;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 40px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #F1F1F1;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+      color: #FAEE07;
+  }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  @media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+
+  <style>
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 30px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24px;
+}
+.active, .collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Mental Health</a>
+    <a href="#">Food</a>
+    <a href="#">Fitness</a>
+    <a href="#">Logs</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+
+<h1 align= center style="border:10px solid orange;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 25px;
+          border-left-width:300px;
+          border-right-width:300px;">
+  <br>
+  Meditation
+  <br>
+  <br>
+</h1>
+<center><img id="med" src="meditation.png" width=475px>
+
+<h3>To test your mindfullness, please click the following link.</h3>
+<h3><a href="https://greatergood.berkeley.edu/quizzes/take_quiz/mindfulness">Mindfullness Quiz</a></h3></center>
+<h2>How To Meditate for Beginners:</h2>
+<h3>1. Start small and consistent - it is important to try your best to meditate frequently for the most effective results, but 3-5 minutes a day is a great place to start because it will feel like a long time when you first start.</h3>
+
+<h3>2. Meditation is open to interpretation - you can meditate in whatever way you please: the most common way is seated, but some people find it easier to walk around a room or lie down.</h3>
+
+<h3>3. Focus on your breating - with your crazy life, your body and mind need a break from all the chaos; basically inhale for 3 seconds, hold for 3 seconds, exhale for 3 seconds, push the rest fo your air out of your lungs, and repeat.</h3>
+
+<h3>4. Keep your eyes closed - it is easy to get distracted by the world around you and if your eyes are closed you can visualize your inhales and exhales.</h3>
+
+<h3>5. Repetition is key - montras or short sayings are a great way to stay focused when breathing; repeat something positive or motivational for each breath sequence.</h3>
+
+
+</body>
+</html>
