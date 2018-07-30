@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .collapsible {
-    background-color: #777;
+    background-color: pink;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -15,60 +15,119 @@
     font-size: 15px;
 }
 .active, .collapsible:hover {
-    background-color: #555;
+    background-color: orange;
 }
 .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F8749A;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 40px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F1F1F1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #FAEE07;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 </style>
 </head>
 <body style="background-color:powderblue;">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Mental Health</a>
+  <a href="#">Food</a>
+  <a href="#">Fitness</a>
+  <a href="#">Logs</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
 
 <h1>Mental Health</h1>
-<p> 
-<p>A Collapsible:</p>
-<button class="collapsible">Open Collapsible</button>
+<p>
+<p>Information:</p>
+<button class="collapsible">Click here for information.</button>
 <div class="content">
-  <p>Hello my name is Adriana Ramos and I am 17 years old. I am about to be a junior. I go to a school called University Prep Value Highschool. I love to play video games.</p>
-  <img src="" alt="Girl in a jacket" style="width:140px;height:140px;">
+  <p>Mental health is a phycological absance of mental illness. Also a person who has a level of emotions and behaviourl adjustment.</p>
+<p><a href="https://en.wikipedia.org/wiki/Mental_health">For more information</a></p>
+<p><a href="https://www.mentalhealth.gov/basics/what-is-mental-health">More information</a></p>
+<img src="https://www.healthyplace.com/sites/default/files/images/stories/insight/quotes/mental-health-quote-hp-47-1-a.jpg" alt="Girl in a jacket" style="width:140px;height:140px;">
 </div>
 
 <p>Collapsible Set:</p>
-<button class="collapsible">Open Section 1</button>
+<button class="collapsible">Atricles</button>
 <div class="content">
-  <p>I love to play sports, basketball is my favorite sport to play because I take our my anger lol.My favorite basketball team are Golden State Warriors. I love to dance and sing.</p>
-   <img src="" alt="Girl in a jacket" style="width:140px;height:140px;">
-<img src="" alt="Girl in a jacket" style="width:150px;height:250px;">
-<img src="" alt="Girl in a jacket" style="width:230px;height:230px;">
-</div>
-<button class="collapsible">Things I love 2</button>
-<div class="content">
-<p>I love rollercoasters, I especially love going to six flags. Im in love with the color blue.</p>
-<img src="" alt="Girl in a jacket" style="width:130px;height:130px;">
-<img src="" alt="Girl in a jacket" style="width:120px;height:120px;">
-<img src="" alt="Girl in a jacket" style="width:120px;height:120px;">
-<img src="" alt="Girl in a jacket" style="width:120px;height:120px;">
-<img src="" style="width:120px;height:120px;">
-</div>
-<button class="collapsible">My Favorite Brands 3</button>
-<div class="content">
-  <p>I love to fo shopping. My favorite brands are Nike, Adidas,Forever 21, and ect.</p>
-  <img src="" style="width:130px;height:130px;">
-<img src="" style="width:130px;height:130px;">
-<img src="" style="width:130px;height:130px;">
-</div>
+  <p>Click here to view the articales we choose to help you..</p>
 
-<button class="collapsible">Favorite Shows 4</button>
+   <img src="http://happyendingsdoc.com/wp-content/uploads/2018/04/positive-mental-health-quotes-to-everyone-not-just-myself-my-friends-and-family-you-are-good-positive-mental-health-quotes.jpg" alt="Girl in a jacket" style="width:140px;height:140px;">
+
+</div>
+<button class="collapsible">Journals</button>
 <div class="content">
-   <p> My favorite shows are Greys Anatomy, Criminal Minds, Once Upon A Time, Pretty Little Liars, Big Bang Theory, Friends, The 90's Show, The Original, and Vampire Diary's.My Favorite movie is The Lovley Bones,The Avengers Infinity War, and any type of scary movie.</p>
-   <img src="" style="width:130px;height:130px;">
+<p>In this journal you can write down how your day has been or how you are feeling..</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSQjwx6VJFJeXIqNY0i1obWERi2V5fOM6tlv2xOEEJvAMl4wj6" alt="Girl in a jacket" style="width:130px;height:130px;">
+</div>
+<button class="collapsible">Meditation</button>
+<div class="content">
+  <p>Here are some ways you can .</p>
+  <img src="https://cdn.pixabay.com/photo/2015/11/26/03/32/chakra-1063278_960_720.jpg" style="width:130px;height:130px;">
 <img src="" style="width:130px;height:130px;">
 <img src="" style="width:130px;height:130px;">
-<img src="" style="width:130px;height:130px;">
-<img src="" style="width:130px;height:130px;">
+</div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
